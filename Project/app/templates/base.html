@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>casares</title>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    </head>
+
+    <body>
+       <header>
+        <img class="mylogo" src="{% static 'images/logo.png' %}">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'service' %}">Service</a>
+        <a href="{% url 'contact' %}">Contact</a>
+       </header>
+
+       {% block content %}
+       <!--pages-->
+       {% endblock content %}
+    </body>
+</html>
